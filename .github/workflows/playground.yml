@@ -12,5 +12,7 @@ jobs:
       - run: pip install antsibull-changelog==0.10.0
       - name: Check out repository code
         uses: actions/checkout@v2
+        with:
+          repository: 'CiscoDevNet/ansible-meraki'
       - name: List files in repository
         run: ls ${{ github.workspace }}
