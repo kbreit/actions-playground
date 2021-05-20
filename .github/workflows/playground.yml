@@ -18,7 +18,7 @@ jobs:
         run: ls ${{ github.workspace }}
       - name: Create temporary changelog file
         run: touch ${{ github.workspace }}/changelog/fragments/tests.yaml
-        run: echo "bugfixes:" > ${{ github.workspace }}/changelog/fragments/tests.yaml
+      - run: echo "bugfixes:" > ${{ github.workspace }}/changelog/fragments/tests.yaml
       - run: echo "- Test" >> ${{ github.workspace }}/changelog/fragments/tests.yaml
       - name: Generate changelog
         run: cd ${{ github.workspace }} && antsibull-changelog release
