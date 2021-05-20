@@ -1,5 +1,8 @@
 name: Playground for releasing Ansible Collections via Github Actions
-on: [create]
+on:
+  push:
+    tags:
+      - '*'
 jobs:
   generate-changelog:
     runs-on: ubuntu-latest
