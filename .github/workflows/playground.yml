@@ -17,7 +17,7 @@ jobs:
       - name: List files in repository
         run: ls ${{ github.workspace }}
       - name: Create temporary changelog file
-        run: touch ${{ github.workspace }}/changelog/fragments/tests.yaml
+        run: touch ${{ github.workspace }}/changelogs/fragments/tests.yaml
       - run: echo "bugfixes:" > ${{ github.workspace }}/changelog/fragments/tests.yaml
       - run: echo "- Test" >> ${{ github.workspace }}/changelog/fragments/tests.yaml
       - name: Generate changelog
