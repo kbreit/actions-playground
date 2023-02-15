@@ -20,7 +20,7 @@ jobs:
       - name: Commit chnages to new branch
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit-message: Prepare for something
+          commit_message: Prepare for something
           branch: feature-123
           create_branch: true
 
