@@ -15,8 +15,7 @@ jobs:
         with:
           python-version: ${{ env.DEFAULT_PYTHON }}
       - name: Modify README.md
-        run:
-          - echo "Modify file" >> README.md
+        run: echo "Modify file" >> README.md
       - name: Commit chnages to new branch
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
