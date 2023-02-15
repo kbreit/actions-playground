@@ -14,3 +14,13 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: ${{ env.DEFAULT_PYTHON }}
+      - name: Modify README.md
+        steps:
+          - echo "Modify file" >> README.md
+      - name: Commit chnages to new branch
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit-message: Prepare for something
+          branch: feature-123
+          create_branch: true
+
