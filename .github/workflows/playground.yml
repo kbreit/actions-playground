@@ -1,9 +1,6 @@
 name: Playground for releasing Ansible Collections via Github Actions
 on:
   push:
-    tags:
-      - '*'
-  workflow_dispatch:
 jobs:
   ansible-release:
     runs-on: ubuntu-latest
