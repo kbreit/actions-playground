@@ -16,8 +16,10 @@ jobs:
           python-version: ${{ env.DEFAULT_PYTHON }}
       - name: Modify README.md
         run: echo "Modify file" >> README.md
+      - name: Show env vars
+        run: export
       - name: Show tag name
-        run: echo "${{ vars.GITHUB_REF_NAME }}"
+        run: echo "$GITHUB_REF_NAME"
       - name: Commit chnages to new branch
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
